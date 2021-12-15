@@ -1,0 +1,17 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: nginxsvc
+  namespace: default
+  labels:
+    app: nginxsvc
+spec:
+  externalTrafficPolicy: Local
+  ports:
+  - name: http
+    port: 8080
+    protocol: TCP
+    targetPort: 80
+  selector:
+    app: apisvc
+  type: LoadBalancer
