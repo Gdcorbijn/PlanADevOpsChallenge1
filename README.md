@@ -6,6 +6,7 @@
     - This setup assumes the following:
         - You are working on a Windows OS (Recommended Windows 10). Linux setup is coming on our next release!... Stay tuned :) 
     - Visual Studio Code (VS Code): https://code.visualstudio.com/Download
+        - Make sure to install all helper extensions for a better experience: Kubernetes, C#, Docker and YAML.
     - .NET 6.0 framework: https://dotnet.microsoft.com/en-us/download/dotnet
     - Docker: https://docs.docker.com/desktop/windows/install/
     - Kubectl cmd tool: https://kubernetes.io/docs/tasks/tools/install-kubectl-windows/#install-kubectl-binary-with-curl-on-windows

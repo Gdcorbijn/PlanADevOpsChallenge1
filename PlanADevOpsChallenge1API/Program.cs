@@ -14,7 +14,8 @@ if (app.Environment.IsDevelopment())
     app.UseSwaggerUI();
 }
 else
-{
+{//Added global error handler. If an unexpected error occurs will redirect to a raw error page.
+//This only applies for non development environments (Running in the local workstation). 
 app.UseExceptionHandler("/error");
 }
 
