@@ -10,8 +10,6 @@ RUN dotnet restore
 COPY ../PlanADevOpsChallenge1API/ ./
 RUN dotnet publish -c Release -o out
 
-VOLUME //./pipe/docker_engine://./pipe/docker_engine
-
 # Build runtime image
 FROM mcr.microsoft.com/dotnet/aspnet:6.0
 WORKDIR /app

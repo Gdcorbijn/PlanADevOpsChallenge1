@@ -37,15 +37,13 @@ public class SampleDataController : ControllerBase
 
     [HttpGet]
     public Dictionary<string, string> Get()
-    {   //WARNING: Uncomment dockerversion if running the application in your workstation (with or without debugging) 
-        //and NOT in a Docker container.
-        //When inside a container, is losing context so the Docker Client to check on the engine version is not reachable.
-        //var dockerversion = GetDockerVersion();        
+    {   
+        var dockerversion = GetDockerVersion();        
         SampleData sdata = new SampleData
         {            
             timestamp = DateTime.Now.ToString(),
             hostname = HttpContext.Request.Host.Value,
-            engine = "TBD",//dockerversion.Result,
+            engine = dockerversion.Result,
             visitorip = HttpContext.Connection.RemoteIpAddress?.ToString()
         };
 
